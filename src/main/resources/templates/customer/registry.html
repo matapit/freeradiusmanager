@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head th:replace="customer/head :: head">...</head>
+<body>
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="preloader">
+  <div class="lds-ripple">
+    <div class="lds-pos"></div>
+    <div class="lds-pos"></div>
+  </div>
+</div>
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+     data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+  <!-- ============================================================== -->
+  <!-- Topbar header - style you can find in pages.scss -->
+  <!-- ============================================================== -->
+  <header th:replace="customer/header :: header">...</header>
+
+  <! -- ============================================================== -->
+  <!-- End Topbar header -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Left Sidebar - style you can find in sidebar.scss  -->
+  <!-- ============================================================== -->
+  <aside th:replace="customer/aside :: aside"></aside>
+  <!-- ============================================================== -->
+  <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Page wrapper  -->
+  <!-- ============================================================== -->
+  <div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb bg-white">
+      <div class="row align-items-center">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+          <h4 class="page-title">Dashboard</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+          <div class="d-md-flex">
+            <ol class="breadcrumb ms-auto">
+              <li><a href="#" class="fw-normal">Dashboard</a></li>
+            </ol>
+
+          </div>
+        </div>
+      </div>
+      <!-- /.col-lg-12 -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+      <!-- ============================================================== -->
+      <!-- Three charts -->
+      <!-- ============================================================== -->
+      <form action="/registration" method="post">
+        <div class="form-group">
+          <div class="mb-3">
+            <label for="firstname" class="form-label">firstname</label>
+            <input type="text" class="form-control" id="firstname" name="firstname" th:value="${customer.firstname}">
+          </div>
+          <div class="mb-3">
+            <label for="lastname" class="form-label">lastname</label>
+            <input type="text" class="form-control" id="lastname" name="lastname" th:value="${customer.lastname}">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">email</label>
+            <input type="email" class="form-control" id="email" name="email" th:value="${customer.email}">
+          </div>
+          <div class="mb-3">
+            <label for="department" class="form-label">department</label>
+            <input type="text" class="form-control" id="department" name="department" th:value="${customer.department}">
+          </div>
+          <div class="mb-3">
+            <label for="city" class="form-label">city</label>
+            <input type="text" class="form-control" id="city" name="city" th:value="${customer.city}">
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">address</label>
+            <input type="text" class="form-control" id="address" name="address" th:value="${customer.address}">
+          </div>
+          <div class="mb-3">
+            <label for="mobilephone" class="form-label">mobilephone</label>
+            <input type="text" class="form-control" id="mobilephone" name="mobilephone" th:value="${customer.mobilephone}">
+          </div>
+          <div class="mb-3">
+            <label for="username" class="form-label">username</label>
+            <input type="text" class="form-control" id="username" name="username" th:value="${customer.username}">
+          </div>
+          <div class="mb-3">
+            <label for="username" class="form-label">password</label>
+            <input type="password" class="form-control" id="password" name="password" th:value="${customer.password}">
+          </div>
+
+
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Valider</button>
+          </div>
+
+        </div>
+      </form>
+
+      <!-- ============================================================== -->
+      <!-- End Container fluid  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- footer -->
+      <!-- ============================================================== -->
+      <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
+              href="https://www.wrappixel.com/">wrappixel.com</a>
+      </footer>
+      <!-- ============================================================== -->
+      <!-- End footer -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Wrapper -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- All Jquery -->
+  <!-- ============================================================== -->
+  <div th:replace="admin/scripts :: scripts">...</div>
+</div>
+</body>
+
+</html>
